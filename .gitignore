@@ -3,3 +3,4 @@
 /.svelte-kit/
 /.idea/
 /package/
+/src/lib/tsui-common.css

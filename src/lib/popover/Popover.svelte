@@ -54,17 +54,13 @@
 
   let w, h;
 
-
-  $: console.log(`client size: ${w}x${h}`)
 </script>
 
 <svelte:window bind:innerWidth={w} bind:innerHeight={h}/>
-<div bind:this={popover} >
+<div bind:this={popover} style="{open ? 'display: block' : ''}">
   {#if open}
   <div class="tsui-popover" transition:slide use:clickOutside on:outerClick={()=>{close()}}>
-    <div class="contents-wrapper" class:shrink={shrink}
-         style="{pos}"
-         >
+    <div class="contents-wrapper" class:shrink={shrink} style="{pos}">
       <div class="contents">
         <div class="contents-inner" style="width: {width}px; height:{height}px">
           <slot></slot>

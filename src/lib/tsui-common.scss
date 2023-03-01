@@ -1,0 +1,25 @@
+.tsui-popover {
+  position: relative;
+  z-index: 50;
+
+  .contents-wrapper {
+    position: absolute;
+    transition: none;
+    display: block;
+
+    .contents {
+      background: var(--tsui-app-background-color);
+      box-shadow: rgba(99, 99, 99, 0.2) 0 2px 8px 0;
+      padding-top: 0;
+      opacity: 1;
+      transform: scale(1);
+      display: block;
+
+      .contents-inner {
+        overflow: auto;
+      }
+    }
+  }
+
+
+}
